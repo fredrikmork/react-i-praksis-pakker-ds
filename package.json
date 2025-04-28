@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "React i praksis: test-pakker",
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsup"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -16,7 +15,8 @@
     "dist"
   ],
   "keywords": [
-    "TypeScript"
+    "TypeScript",
+    "Console log"
   ],
   "author": "Fredrik Mørk <fredrik.1997@hotmail.com>",
   "license": "MIT",
@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/fredrikmork/react-i-praksis-pakker-ds#readme",
   "devDependencies": {
-    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   }
 }
