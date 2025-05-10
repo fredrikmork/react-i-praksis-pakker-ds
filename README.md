@@ -1,4 +1,4 @@
-Guide til lansering av egen npm-pakke
+# Guide til lansering av egen npm-pakke 📦
 
 1. [Opprett npm bruker](https://www.npmjs.com/signup)
 2. Test brukeren din med `npm login`: [dokumentasjon](https://docs.npmjs.com/creating-a-new-npm-user-account#testing-your-new-account-with-npm-login)
@@ -10,28 +10,18 @@ Dist-mappen inneholder kompilerte filer og genereres i byggeprosessen.
 7. I `package.json` kan du legge på nøkkelord som `author`, `license`, `keywords`, `bugs`, `homepage`, `repository`. Dette blir referanser som brukere kan se på npm-siden til pakken din. Prøv å fylle ut disse og sjekk ut senere 😁.
 8. `npm install -D typescript` for å kunne skrive TypeScript. Dette gjør vi for å kunne konvertere `.ts`-filer til `.js`-filer. Det er for å kunne sjekke typer under utvikling og generering av `.d.ts` filer som vi så på i steg 5.
 9. Opprett en `.gitignore` og legg til `node_modules` og `dist` ettersom disse ikke er vits å versjonskontrollere genererte filer.
+10. For å kompilere koden til JavaScrip trenger vi en `tsconfig.json`-fil. Dette gjør vi med kommandoen `npx tsc --init`. Hvis du har TypeScript globalt på maskinen trenger du ikke ha med `npx`. `tsc` er et TypeScript cli som lar deg kompilere fra TypeScript til JavaScript.
+</br>a. Legg til `"include": ["src"]` som forteller `tsc` hvilken kode du skal kompilere.
+</br>b. `"exclude": ["node_modules", "dist"]` på utsiden av compilerOptions. Dette er paths som du ikke vil kompilere. Legg til `"outDir": "./dist"`, i compilerOptions. Det er her koden blir plassert.
+11. `git init` på rot-nivå i pakken etterfulgt av `git remote add origin git://git-remote-url`.
+12. `npm publish` og sjekk at du har publisert pakken din på npmjs.com!
+13. Gjør en endring og gjør en npm publish igjen, se hva som skjer! Kan `npm version patch` hjelpe?
+    
+## 📚[Scopes](https://docs.npmjs.com/about-scopes)
+* [unscoped public packages](https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages)
+* [scoped public packages](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)
+* [private packages](https://docs.npmjs.com/creating-and-publishing-private-packages)
 
-a. Legg til "include": ["src"],
-    "exclude": ["node_modules"] på utsiden av compilerOptions
-Legg til "outDir": "./dist", i compilerOptions
-
-1. npm install -D tsup Vi trenger å bygge typescript-pakken vårt og må derfor bundle det først. 
-
-    * Hva er bundling? Diskuterer med sidemannen
-
-1. git init på rot-nivå i pakken
-2. git remote add origin git://git-remote-url
-
-Oppretter og publiserer
-
-* unscoped public packages
-* scoped public packages
-* private packages
-
-
-Hva scopes er: https://docs.npmjs.com/about-scopes
-Noe å tenke på når man velger navn: https://docs.npmjs.com/package-name-guidelines
-Ny versjon npm version patch
 
 Utforsking av npm publish - hva har Helene gjort:
 
