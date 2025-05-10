@@ -1,6 +1,6 @@
 {
   "name": "react-i-praksis-pakker-ds",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React i praksis: test-pakker",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
