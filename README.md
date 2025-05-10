@@ -14,7 +14,7 @@ eller
 yarn add react-i-praksis-pakker-ds
 ```
 
-eller hvis du vil være sjef:
+eller hvis du vil være sjefsjef 🕶️:
 
 ```
 pnpm add react-i-praksis-pakker-ds
@@ -24,7 +24,7 @@ pnpm add react-i-praksis-pakker-ds
 
 Pakken eksporterer en enkel funksjon som logger en hilsen til konsollen.
 
-### ES Moduler
+### ES Modules
 
 ```
 import { hello } from 'react-i-praksis-pakker-ds';
@@ -40,7 +40,7 @@ const { hello } = require('react-i-praksis-pakker-ds');
 hello('Verden'); // Logger: Hello, Verden!
 ```
 
-### API
+### Tilgjengelig funksjon
 
 `hello(name: string): void`
 Logger en hilsen til konsollen.
@@ -49,13 +49,9 @@ Logger en hilsen til konsollen.
 
 `name`: Navnet som skal inkluderes i hilsningsbeskjeden
 
-#### Returnerer
+#### Retur-verdi
 
 Denne funksjonen returnerer ingen verdi, men en melding i console.
-
-## TypeScript-støtte
-
-Denne pakken inkluderer TypeScript-deklarasjoner og er fullt typet.
 
 ## Lisens 🧑🏼‍⚖️
 
